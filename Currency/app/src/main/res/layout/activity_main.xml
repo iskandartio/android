@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.iak.currency.MainActivity">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/filter">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Quote!"
+        android:id="@+id/quote"/>
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="Add"
+        android:id="@+id/add"
+        android:src="@android:drawable/ic_input_add"
+        android:onClick="add_click"
+        android:minWidth="30dp"
+        android:scaleType="fitCenter" />
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:text="Refresh"
+        android:id="@+id/refresh"
+        android:src="@android:drawable/ic_search_category_default"
+        android:onClick="refresh_click"
+        android:minWidth="30dp"
+        android:minHeight="30dp"
+        android:maxHeight="30dp"
+        android:scaleType="fitCenter" />
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none"
+        android:id="@+id/scrollView"
+        android:layout_below="@+id/filter"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal"
+            android:id="@+id/tbl">
+
+        </TableLayout>
+    </ScrollView>
+</RelativeLayout>
