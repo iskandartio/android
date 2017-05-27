@@ -47,6 +47,13 @@ public class MainActivity extends AppCompatActivity {
         String[] s;
         ArrayList<String[]> result=new ArrayList<>();
         db db= new db(this);
+        while (!isNetworkAvailable()) {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
         if (isNetworkAvailable()) {
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
             StrictMode.setThreadPolicy(policy);
